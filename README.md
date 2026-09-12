@@ -115,17 +115,4 @@ This website serves as a central place to document my projects and experience wh
 
 It is also a work in progress. As I complete new projects, competitions, and learning experiences, the portfolio will continue to be updated.
 
-## Connect
 
-**GitHub:**
-https://github.com/andkal06
-
-**LinkedIn:**
-Add your LinkedIn profile here
-
-**Portfolio:**
-Add your deployed portfolio URL here
-
----
-
-Built and maintained by **Kalya Andriana**.

@@ -1,0 +1,292 @@
+/**
+ * Design Tokens & Custom Styles for "Dreamy Sunset & Twilight Sky"
+ * High-chroma Multi-stop Sky Gradients & Translucent Glass Architecture
+ * Portfolio for Kalya Andriana
+ */
+
+:root {
+  /* Bold Multi-Stop Sunset Sky Spectrum */
+  --sky-dusty-rose: #E8A9C4;
+  --sky-rose-deep: #D48BAE;
+  --sky-soft-violet: #B79FD1;
+  --sky-deep-violet: #8E72A8;
+  --sky-periwinkle: #7FA6D9;
+  --sky-twilight-blue: #5B7BB3;
+  --sky-dusk-indigo: #3D4A6B;
+  --sky-nightfall-violet: #2D233B;
+
+  /* Saturated High-Contrast Accent */
+  --sky-accent-magenta: #C266A7;
+  --sky-accent-magenta-hover: #AB4B8E;
+  --sky-sunburst-glow: #FFD2B8;
+
+  /* Text & Ink hierarchy */
+  --sky-ink-primary: #1C1E26;
+  --sky-ink-secondary: #423B4E;
+  --sky-ink-muted: #645C72;
+
+  /* Translucent Frosted Glass */
+  --surface-sky-glass: rgba(255, 255, 255, 0.54);
+  --surface-sky-glass-hover: rgba(255, 255, 255, 0.72);
+  --surface-border-rose: rgba(232, 169, 196, 0.55);
+  --surface-border-glow: rgba(194, 102, 167, 0.65);
+
+  /* Typography */
+  --font-serif: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Easing */
+  --ease-sky: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-gentle: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+  color: var(--sky-ink-primary);
+  background: #E8A9C4;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: var(--font-sans);
+  color: var(--sky-ink-primary);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: transparent;
+}
+
+/* Typography Helpers */
+.font-serif-dreamy {
+  font-family: var(--font-serif);
+  letter-spacing: -0.025em;
+}
+
+.font-sans-humanist {
+  font-family: var(--font-sans);
+}
+
+.tracking-editorial {
+  letter-spacing: 0.22em;
+}
+
+/* Saturated Magenta-Violet Accent Dots & Badges */
+.sky-bullet {
+  background: var(--sky-accent-magenta);
+  box-shadow: 0 0 10px rgba(194, 102, 167, 0.65);
+}
+
+.sky-gradient-badge {
+  background: rgba(255, 255, 255, 0.68);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1.5px solid rgba(194, 102, 167, 0.5);
+  color: #261633;
+}
+
+.sky-accent-btn {
+  background: linear-gradient(135deg, #C266A7 0%, #A34889 100%);
+  color: #FFFFFF;
+  box-shadow: 0 8px 24px -6px rgba(194, 102, 167, 0.55);
+  transition: all 0.3s var(--ease-sky);
+}
+
+.sky-accent-btn:hover {
+  background: linear-gradient(135deg, #CF6FB4 0%, #B05095 100%);
+  box-shadow: 0 12px 28px -6px rgba(194, 102, 167, 0.7);
+  transform: translateY(-2px);
+}
+
+/* Rich Multi-Stop Sky Gradients for Distinct Sections */
+.section-hero-sky {
+  background: linear-gradient(140deg, rgba(232, 169, 196, 0.88) 0%, rgba(203, 170, 222, 0.8) 45%, rgba(127, 166, 217, 0.78) 100%);
+  box-shadow: 0 20px 60px -20px rgba(127, 166, 217, 0.4);
+}
+
+.section-about-sky {
+  background: linear-gradient(145deg, rgba(183, 159, 209, 0.85) 0%, rgba(157, 178, 224, 0.78) 50%, rgba(127, 166, 217, 0.82) 100%);
+  box-shadow: 0 20px 60px -20px rgba(183, 159, 209, 0.35);
+}
+
+.section-education-sky {
+  background: linear-gradient(140deg, rgba(203, 170, 222, 0.84) 0%, rgba(183, 159, 209, 0.78) 45%, rgba(127, 166, 217, 0.82) 100%);
+  box-shadow: 0 20px 60px -20px rgba(183, 159, 209, 0.35);
+}
+
+.section-experience-sky {
+  background: linear-gradient(135deg, rgba(232, 169, 196, 0.82) 0%, rgba(183, 159, 209, 0.78) 45%, rgba(142, 114, 168, 0.72) 100%);
+  box-shadow: 0 20px 60px -20px rgba(142, 114, 168, 0.35);
+}
+
+.section-projects-sky {
+  background: linear-gradient(150deg, rgba(127, 166, 217, 0.82) 0%, rgba(162, 142, 196, 0.78) 45%, rgba(209, 159, 194, 0.78) 100%);
+  box-shadow: 0 20px 60px -20px rgba(127, 166, 217, 0.35);
+}
+
+.section-skills-sky {
+  background: linear-gradient(155deg, rgba(127, 166, 217, 0.85) 0%, rgba(142, 114, 168, 0.78) 55%, rgba(100, 118, 158, 0.8) 100%);
+  box-shadow: 0 20px 60px -20px rgba(100, 118, 158, 0.35);
+}
+
+.section-contact-sky {
+  background: linear-gradient(160deg, rgba(142, 114, 168, 0.92) 0%, rgba(86, 104, 148, 0.88) 45%, rgba(45, 35, 59, 0.95) 100%);
+  box-shadow: 0 24px 70px -20px rgba(45, 35, 59, 0.5);
+}
+
+/* Translucent Glass Cards with Sky-Showthrough */
+.dreamy-card {
+  background: var(--surface-sky-glass);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--surface-border-rose);
+  box-shadow: 0 16px 36px -12px rgba(127, 166, 217, 0.32), inset 0 1px 0 rgba(255, 255, 255, 0.85);
+  transition: all 0.35s var(--ease-sky);
+}
+
+.dreamy-card:hover {
+  background: var(--surface-sky-glass-hover);
+  border-color: var(--surface-border-glow);
+  transform: translateY(-3px);
+  box-shadow: 0 22px 48px -12px rgba(194, 102, 167, 0.38), inset 0 1px 0 rgba(255, 255, 255, 0.95);
+}
+
+.dreamy-card-outlined {
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1.5px dashed rgba(183, 159, 209, 0.65);
+  box-shadow: 0 12px 28px -10px rgba(183, 159, 209, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  transition: all 0.35s var(--ease-sky);
+}
+
+.dreamy-card-outlined:hover {
+  background: rgba(255, 255, 255, 0.55);
+  border-color: var(--sky-accent-magenta);
+  transform: translateY(-3px);
+}
+
+/* Slow Atmospheric Drift Animations */
+@keyframes cloudFloatLeft {
+  0% {
+    transform: translate3d(-3%, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(5%, -12px, 0) scale(1.04);
+  }
+  100% {
+    transform: translate3d(-3%, 0, 0) scale(1);
+  }
+}
+
+@keyframes cloudFloatRight {
+  0% {
+    transform: translate3d(5%, 0, 0) scale(1.03);
+  }
+  50% {
+    transform: translate3d(-4%, 15px, 0) scale(0.97);
+  }
+  100% {
+    transform: translate3d(5%, 0, 0) scale(1.03);
+  }
+}
+
+@keyframes birdGentleGlide {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(-1.5deg);
+  }
+}
+
+.animate-cloud-slow-1 {
+  animation: cloudFloatLeft 85s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+  will-change: transform;
+}
+
+.animate-cloud-slow-2 {
+  animation: cloudFloatRight 110s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+  will-change: transform;
+}
+
+.animate-bird-glide {
+  animation: birdGentleGlide 7s ease-in-out infinite;
+}
+
+/* Sun Atmosphere Animations */
+@keyframes sunCoronaPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.65;
+  }
+  50% {
+    transform: scale(1.08);
+    opacity: 0.85;
+  }
+}
+
+@keyframes sunRayRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-sun-rays {
+  animation: sunRayRotate 180s linear infinite;
+  transform-origin: center center;
+}
+
+@keyframes cloudDriftSmooth1 {
+  0% {
+    transform: translateX(0px) translateY(0px);
+  }
+  50% {
+    transform: translateX(35px) translateY(-8px);
+  }
+  100% {
+    transform: translateX(0px) translateY(0px);
+  }
+}
+
+@keyframes cloudDriftSmooth2 {
+  0% {
+    transform: translateX(0px) translateY(0px);
+  }
+  50% {
+    transform: translateX(-40px) translateY(10px);
+  }
+  100% {
+    transform: translateX(0px) translateY(0px);
+  }
+}
+
+.animate-cloud-drift-1 {
+  animation: cloudDriftSmooth1 28s ease-in-out infinite;
+  will-change: transform;
+}
+
+.animate-cloud-drift-2 {
+  animation: cloudDriftSmooth2 34s ease-in-out infinite;
+  will-change: transform;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #E8A9C4;
+}
+::-webkit-scrollbar-thumb {
+  background: #B79FD1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C266A7;
+}

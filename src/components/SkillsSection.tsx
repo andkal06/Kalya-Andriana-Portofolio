@@ -117,9 +117,6 @@ export const SkillsSection: React.FC = () => {
                     <p className="text-xs text-[#524461] font-medium mt-0.5">{group.sublabel}</p>
                   </div>
                 </div>
-                <span className="text-xs font-bold font-mono px-2.5 py-1 rounded-full bg-white/50 text-[#7A406B] border border-[#B79FD1]/40">
-                  {group.skills.length} skills
-                </span>
               </div>
 
               {/* Tag / Pill Badges with dot prefix (matching reference image style) */}

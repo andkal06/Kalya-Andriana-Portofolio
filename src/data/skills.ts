@@ -24,8 +24,6 @@ export const skillsData: SkillItem[] = [
   { name: 'IT Governance, Risk & Compliance', category: 'cybersecurity', tag: 'GRC' },
 
   // --- 2. Programming ---
-  { name: 'HTML', category: 'programming', tag: 'Web' },
-  { name: 'CSS', category: 'programming', tag: 'Web' },
   { name: 'JavaScript', category: 'programming', tag: 'Frontend/Node' },
   { name: 'Python', category: 'programming', tag: 'AI/Scripting' },
   { name: 'C++', category: 'programming', tag: 'Systems/Embedded' },

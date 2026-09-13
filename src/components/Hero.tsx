@@ -2,14 +2,14 @@ import React from 'react';
 import { profileData } from '../data/profile';
 import { BirdSilhouette, BirdFlock } from './BirdSilhouette';
 import { Cloud } from './Cloud';
+import { SunsetSun } from './SunsetSun';
 
 interface HeroProps {
   onNavigate: (sectionId: string) => void;
 }
 
 export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
-  const { name, roleTitle, tagline, status, institution, location, focusAreas, quickStats } =
-    profileData;
+  const { name, roleTitle, tagline, location, focusAreas, quickStats } = profileData;
 
   return (
     <section
@@ -41,32 +41,82 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
         className="absolute top-1/2 right-[0%] w-72 h-36 rounded-full bg-[#7FA6D9]/40 blur-3xl pointer-events-none -z-10"
       />
 
+      {/* Quiet setting sun tucked into the upper edge of the sky */}
+      <div
+        aria-hidden="true"
+        className="absolute top-[2%] right-[-8%] sm:top-[4%] sm:right-[5%] w-[360px] h-[360px] sm:w-[500px] sm:h-[500px] opacity-90 pointer-events-none z-0"
+      >
+        <SunsetSun className="w-full h-full" />
+      </div>
+
       {/* Stylized Organic Sunset Clouds in Hero */}
       <div
         aria-hidden="true"
-        className="absolute -top-4 right-12 pointer-events-none -z-10 animate-cloud-drift-1 hidden sm:block"
+        className="absolute top-[2%] right-[8%] pointer-events-none z-[1] animate-cloud-drift-1 hidden sm:block"
       >
         <Cloud
           type="cumulus-puffy"
-          width={320}
-          opacity={0.82}
-          highlightColor="rgba(255, 252, 242, 0.95)"
-          midColor="rgba(245, 195, 218, 0.7)"
-          shadowColor="rgba(180, 155, 210, 0.55)"
+          width={390}
+          opacity={0.94}
+          highlightColor="rgba(255, 252, 242, 0.98)"
+          midColor="rgba(245, 195, 218, 0.82)"
+          shadowColor="rgba(180, 155, 210, 0.68)"
         />
       </div>
 
       <div
         aria-hidden="true"
-        className="absolute bottom-4 left-6 pointer-events-none -z-10 animate-cloud-drift-2 hidden md:block"
+        className="absolute bottom-[3%] left-[-2%] pointer-events-none z-0 animate-cloud-drift-2 hidden md:block"
       >
         <Cloud
           type="stratus-drift"
-          width={340}
+          width={430}
+          opacity={0.86}
+          highlightColor="rgba(255, 245, 235, 0.94)"
+          midColor="rgba(235, 185, 215, 0.76)"
+          shadowColor="rgba(160, 145, 205, 0.62)"
+        />
+      </div>
+
+      <div
+        aria-hidden="true"
+        className="absolute top-[30%] left-[-100px] pointer-events-none z-0 animate-cloud-drift-1 hidden lg:block"
+      >
+        <Cloud
+          type="fluffy-cluster"
+          width={310}
+          opacity={0.72}
+          highlightColor="rgba(255, 249, 242, 0.92)"
+          midColor="rgba(232, 190, 218, 0.68)"
+          shadowColor="rgba(173, 157, 207, 0.5)"
+        />
+      </div>
+
+      <div
+        aria-hidden="true"
+        className="absolute bottom-[18%] right-[-90px] pointer-events-none z-[1] animate-cloud-drift-2 hidden sm:block"
+      >
+        <Cloud
+          type="stratus-drift"
+          width={360}
+          opacity={0.7}
+          highlightColor="rgba(255, 245, 238, 0.9)"
+          midColor="rgba(218, 183, 220, 0.66)"
+          shadowColor="rgba(142, 151, 198, 0.48)"
+        />
+      </div>
+
+      <div
+        aria-hidden="true"
+        className="absolute top-[18%] right-[-80px] pointer-events-none z-[1] animate-cloud-drift-2 hidden lg:block"
+      >
+        <Cloud
+          type="fluffy-cluster"
+          width={280}
           opacity={0.78}
-          highlightColor="rgba(255, 245, 235, 0.9)"
-          midColor="rgba(235, 185, 215, 0.65)"
-          shadowColor="rgba(160, 145, 205, 0.5)"
+          highlightColor="rgba(255, 247, 238, 0.94)"
+          midColor="rgba(238, 182, 211, 0.7)"
+          shadowColor="rgba(164, 143, 198, 0.56)"
         />
       </div>
 
@@ -82,14 +132,6 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center relative z-10">
         {/* Left Column: Name, Eyebrows, Tagline, CTAs */}
         <div className="lg:col-span-7 space-y-6">
-          {/* Status Badge with Saturated Magenta Accent */}
-          <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full text-xs sm:text-sm font-medium tracking-wide sky-gradient-badge shadow-sm">
-            <span className="w-2.5 h-2.5 rounded-full sky-bullet animate-pulse" />
-            <span className="font-semibold text-[#22172E]">{status}</span>
-            <span className="text-[#8E72A8]">•</span>
-            <span className="text-[#382F47]">{institution}</span>
-          </div>
-
           {/* Main Hero Name with Expressive Fraunces Typography */}
           <div className="space-y-2">
             <h1 className="text-5xl sm:text-7xl lg:text-8xl font-serif-dreamy font-bold tracking-tight text-[#1A1924] leading-[1.03]">

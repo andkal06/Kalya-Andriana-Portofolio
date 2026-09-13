@@ -13,8 +13,8 @@ export const profileData: ProfileData = {
   name: 'Kalya Andriana',
   roleTitle: 'Internet Engineering Student',
   tagline: 'Learning, building, and exploring across networks, AI, and cybersecurity',
-  status: '5th Semester Student in Internet Engineering Technology (D4)',
-  institution: 'Universitas Gadjah Mada (UGM)',
+  status: 'Active Undergraduate Student (5th Semester)',
+  institution: 'Universitas Gadjah Mada',
   gpa: '3.91 / 4.00', // Rendered exclusively once in the About "Formal Education" card
   location: 'Yogyakarta, Indonesia',
   focusAreas: [
@@ -25,7 +25,7 @@ export const profileData: ProfileData = {
     'IoT Architectures'
   ],
   heroQuote: {
-    text: '\u201cTo the star who listen and the dreams that are answered.\u201d',
+    text: '\u201cTo the star who listens and the dreams that are answered.\u201d',
     reflection: 'There is a particular kind of quiet that settles in after midnight, when the terminal is the only light left on, and the cursor blinks like something waiting to be told a secret. That is where most of what follows was built.'
   },
   aboutBio: 'Undergraduate engineer passionate about Cyber Security and Artificial Intelligence',
@@ -50,7 +50,7 @@ export const profileData: ProfileData = {
     {
       label: 'Applied Systems',
       value: '6+ Works',
-      detail: 'Cyber Security, Artificial Inteligence, IoT Vaults & Network Pipelines'
+      detail: 'Cyber Security, Artificial Intelligence, IoT Vaults & Network Pipelines'
     }
   ]
 };

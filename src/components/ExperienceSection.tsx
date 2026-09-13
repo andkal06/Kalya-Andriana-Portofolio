@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { experienceData } from '../types';
+import { experienceData } from '../data/experience';
 import { BirdSilhouette } from './BirdSilhouette';
 
 type TabCategory = 'all' | 'work' | 'committee';

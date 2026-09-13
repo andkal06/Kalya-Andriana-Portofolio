@@ -21,7 +21,12 @@ export const experienceData: ExperienceItem[] = [
     category: 'work',
     location: 'Indonesia',
     description:
-      'Developed and trained Computer Vision models using YOLO for automated carton damage detection and driver safety monitoring. Worked on models for detecting driver fatigue and unsafe activities such as closed eyes, yawning, mobile phone usage, and smoking, which were later integrated into the Lihat.id platform.'
+      'Developed and trained Computer Vision models using YOLO architectures for automated industrial carton damage detection and driver safety monitoring. The developed models were integrated into the Lihat.id platform for real world monitoring applications.',
+    highlights: [
+      'Developed and optimized custom YOLO models for multi-class carton damage detection.',
+      'Trained Computer Vision models for driver fatigue and unsafe activity detection, including closed eyes, yawning, mobile phone usage, and smoking.',
+      'Evaluated model performance and compared different YOLO architectures to identify suitable models for deployment.'
+    ]
   },
   {
     id: 'ugm-programming-ta',

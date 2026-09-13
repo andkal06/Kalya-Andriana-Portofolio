@@ -10,9 +10,10 @@ export const educationData: EducationItem = {
   type: 'university',
   status: 'Active Undergraduate Student (5th Semester)',
   gpa: '3.91 / 4.00',
-  description: 'Undergraduate study focused on cyber security, Artificial Intelligence, and IoT systems at UGM.',
+  description: 'Undergraduate study focused on Cyber Security, Artificial Intelligence, and IoT systems at UGM.',
   honors: [
-    'Semifinalist Business Plan Competition ISF 2026',
+    'Semifinalist National Business Plan Competition ISF 2026',
+    '1st Place Departement Level Scientific Writing Competition TGES 2025'
   ]
 };
 

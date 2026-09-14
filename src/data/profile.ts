@@ -44,8 +44,8 @@ export const profileData: ProfileData = {
   quickStats: [
     {
       label: 'Academic Trajectory',
-      value: 'S.Tr.T Candidate',
-      detail: 'Internet Engineering Technology (D4) at UGM'
+      value: 'Internet Engineering Student (5th Semester)',
+      detail: 'Universitas Gadjah Mada'
     },
     {
       label: 'Applied Systems',

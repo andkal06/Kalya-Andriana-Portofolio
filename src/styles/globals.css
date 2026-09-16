@@ -290,3 +290,38 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #C266A7;
 }
+
+/* Mobile Drawer Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideRight {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.25s ease-out forwards;
+}
+
+.animate-slideRight {
+  animation: slideRight 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Sidebar & Navigation Active Accent */
+.nav-link-active {
+  background: linear-gradient(90deg, rgba(194, 102, 167, 0.18) 0%, rgba(183, 159, 209, 0.12) 60%, transparent 100%);
+  color: #8C3E75 !important;
+  font-weight: 700;
+}
+

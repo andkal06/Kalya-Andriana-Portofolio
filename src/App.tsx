@@ -1,6 +1,6 @@
 import React from 'react';
 import { SkyBackground } from './components/SkyBackground';
-import { Navbar } from './components/Navbar';
+import { Sidebar } from './components/Sidebar';
 import { Hero } from './components/Hero';
 import { About } from './components/About';
 import { EducationSection } from './components/EducationSection';
@@ -14,7 +14,15 @@ export default function App() {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      // Offset scroll by mobile top bar height if on small screens
+      const isMobile = window.innerWidth < 1024;
+      if (isMobile) {
+        const yOffset = -72;
+        const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+      } else {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     }
   };
 
@@ -23,24 +31,26 @@ export default function App() {
       {/* Dynamic Multi-stop Sunset & Twilight Sky Backdrop with Grain and Drifting Clouds */}
       <SkyBackground />
 
-      {/* Fixed Frosted Glass Top Navigation */}
-      <Navbar onNavigate={scrollToSection} />
+      {/* Fixed Frosted Glass Vertical Sidebar (240px) & Mobile Header */}
+      <Sidebar onNavigate={scrollToSection} />
 
-      {/* Main Content Flow with Atmospheric Transitions */}
-      <main className="relative z-10 pt-4 pb-12">
-        <Hero onNavigate={scrollToSection} />
-        <SectionDivider />
-        <About />
-        <SectionDivider />
-        <EducationSection />
-        <SectionDivider />
-        <ExperienceSection />
-        <SectionDivider />
-        <ProjectsSection />
-        <SectionDivider />
-        <SkillsSection />
-        <SectionDivider />
-        <Contact />
+      {/* Main Content Area with exact 240px margin-left and 2rem 4rem padding */}
+      <main className="relative z-10 pt-20 lg:pt-0 lg:ml-[240px] transition-all duration-300">
+        <div className="w-full px-5 sm:px-8 md:px-12 lg:px-16 py-6 sm:py-8 lg:py-10 max-w-[1400px] mx-auto space-y-6">
+          <Hero onNavigate={scrollToSection} />
+          <SectionDivider />
+          <About />
+          <SectionDivider />
+          <EducationSection />
+          <SectionDivider />
+          <ExperienceSection />
+          <SectionDivider />
+          <ProjectsSection />
+          <SectionDivider />
+          <SkillsSection />
+          <SectionDivider />
+          <Contact />
+        </div>
       </main>
     </div>
   );

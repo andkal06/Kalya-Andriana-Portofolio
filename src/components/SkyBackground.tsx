@@ -88,6 +88,30 @@ export const SkyBackground: React.FC = () => {
         }}
       />
 
+      {/* Sunset Orange & Peach Ambient Gradient Mesh (Flows directly underneath the left Sidebar) */}
+      <div
+        className="absolute w-[650px] h-[650px] sm:w-[900px] sm:h-[900px] rounded-full blur-[100px] sm:blur-[160px] pointer-events-none transition-opacity duration-700"
+        style={{
+          top: '-10%',
+          left: '-15%',
+          background:
+            'radial-gradient(circle, rgba(255, 175, 120, 0.85) 0%, rgba(244, 160, 195, 0.6) 35%, rgba(194, 102, 167, 0.35) 65%, transparent 80%)',
+          opacity: Math.max(1 - scrollProgress * 1.1, 0.45),
+        }}
+      />
+
+      {/* Mid/Dusk Purple & Rose Mesh Glow (Flows along lower-left boundary) */}
+      <div
+        className="absolute w-[600px] h-[600px] sm:w-[850px] sm:h-[850px] rounded-full blur-[90px] sm:blur-[150px] pointer-events-none transition-opacity duration-700"
+        style={{
+          bottom: '15%',
+          left: '-10%',
+          background:
+            'radial-gradient(circle, rgba(212, 139, 174, 0.55) 0%, rgba(183, 159, 209, 0.5) 40%, rgba(127, 166, 217, 0.35) 70%, transparent 85%)',
+          opacity: 0.75,
+        }}
+      />
+
       {/* Luminous Setting Sun (Matahari Terbenam) */}
       <div className="absolute top-[2%] sm:top-[4%] right-[4%] sm:right-[8%] pointer-events-none z-0">
         <SunsetSun

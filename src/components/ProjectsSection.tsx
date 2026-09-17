@@ -16,6 +16,9 @@ export const ProjectsSection: React.FC = () => {
 
   const filteredProjects = projectsData.filter((proj) => {
     if (activeFilter === 'all') return true;
+    if (Array.isArray(proj.category)) {
+      return proj.category.includes(activeFilter as any);
+    }
     return proj.category === activeFilter;
   });
 

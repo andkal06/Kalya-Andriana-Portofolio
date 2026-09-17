@@ -14,6 +14,8 @@ export interface ExperienceItem {
   highlights?: string[];
 }
 
+export type ProjectCategory = 'ai' | 'iot' | 'software' | 'research' | 'cybersecurity';
+
 export interface ProjectItem {
   id: string;
   title: string;
@@ -22,7 +24,7 @@ export interface ProjectItem {
   description: string;
   tags: string[];
   link?: string;
-  category?: 'ai' | 'iot' | 'software' | 'research' | 'cybersecurity';
+  category?: ProjectCategory | ProjectCategory[];
   highlights?: string[];
 }
 

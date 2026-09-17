@@ -12,6 +12,22 @@ import { ProjectItem } from '../types';
  */
 export const projectsData: ProjectItem[] = [
   {
+    id: 'iot-security-system',
+    title: 'IoT Security System Development',
+    role: 'Fullstack Engineer',
+    period: 'Sep 2026 - Present',
+    category: 'software',
+    description:
+      'Developing an IoT security system with a focus on user activity monitoring and security auditing. Built an activity logging interface and integrated it with a database to record, store, and retrieve user activities, providing visibility into user actions and system events.',
+    tags: ['Cybersecurity', 'IoT Security', 'Fullstack Development', 'Activity Logging', 'Security Monitoring', 'Database'],
+    highlights: [
+      'Developed a user activity logging interface to record and display user actions within the IoT system.',
+      'Integrated the activity logging functionality with a database to store and retrieve user activity records for security monitoring and auditing.',
+      'Implemented activity tracking to provide visibility into user actions and system events, supporting accountability and security monitoring.'
+    ],
+    link: 'coming soon'
+  },
+  {
     id: 'hacktrace-network-forensic',
     title: 'Web Application Compromise & Remote Code Execution Investigation',
     role: 'DFIR Analyst',
@@ -25,8 +41,27 @@ export const projectsData: ProjectItem[] = [
       'Identified Indicators of Compromise including attacker IPs, malicious web shell activity, reverse shell communication, suspicious user agents, and attack payloads.',
       'Developed incident response recommendations covering immediate containment.'
     ],
-    link: 'coming soon'
+    link: 'https://drive.google.com/file/d/1C3RPymLfYyhtsn8aKBj8gBAqEDkDM1M0/view?usp=sharing'
   },
+
+  {
+    id: 'wazuh-soc-lab',
+    title: 'SOC Monitoring & Threat Detection Lab',
+    role: 'SOC Analyst',
+    period: 'Sep 2026',
+    category: 'cybersecurity',
+    description:
+      'Built a hands-on SOC lab using Wazuh to practice endpoint security monitoring, alert detection, and security event investigation. Configured Wazuh agents to collect endpoint telemetry and investigated security alerts generated from controlled attack simulations and File Integrity Monitoring (FIM) activities.',
+    tags: ['Cybersecurity', 'SOC', 'Wazuh', 'Security Monitoring', 'FIM', 'Log Analysis'],
+    highlights: [
+      'Configured a Wazuh-based SOC environment with Wazuh Manager, Dashboard, and endpoint agents for centralized security monitoring.',
+      'Investigated security alerts from controlled attack simulations by analyzing event timestamps, affected endpoints, users, files, and detection rules.',
+      'Implemented and analyzed File Integrity Monitoring (FIM) to detect unauthorized file creation, modification, and deletion on monitored endpoints.',
+      'Documented the detection and investigation workflow from endpoint activity and alert generation to security event analysis.'
+    ],
+    link: 'https://github.com/andkal06/Wazuh-SOC-Lab'
+  },
+
   {
     id: 'fertilizer-prediction-ai',
     title: 'AI-Based Fertilizer Type Prediction Model',
